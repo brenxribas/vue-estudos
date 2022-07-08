@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2>Meu formulário: </h2>
-    <form action="">
-      <div><InputTextVue /></div>
-      <div><InputTextVue /></div>
+    <form action="" @submit="enviarFormulario($event)">
+      <div><input type="text" v-model="name" placeholder="Nome"></div>
+      <div><input type="text" v-model="email" placeholder="Email"></div>
       <div><SubmitVue /></div>
     </form>
   </div>
@@ -19,5 +19,23 @@ export default {
     InputTextVue,
     SubmitVue,
   },
+  data() {
+    return {
+      name: "",
+      email: ""
+    }
+  },
+  methods: {
+    enviarFormulario(e){
+      e.preventDefault();
+
+      const name = this.name;
+      const email = this.email;
+
+      console.log('O nome é: '+name);
+      console.log('O email é: '+email)
+      console.log('Form enviado!');
+    }
+  }
 };
 </script>

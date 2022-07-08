@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HeaderVue/>
     <PrimeiroComponenteVue />
     <LifeCycleVue />
     <PessoaVue/>
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+import HeaderVue from './components/Header.vue';
 import PrimeiroComponenteVue from "./components/PrimeiroComponente.vue";
 import LifeCycleVue from "./components/LifeCycle.vue";
 import PessoaVue from "./components/Pessoa.vue";
@@ -14,6 +16,7 @@ import PessoaVue from "./components/Pessoa.vue";
 export default {
   name: "App",
   components: {
+    HeaderVue,
     PrimeiroComponenteVue,
     LifeCycleVue,
     PessoaVue
@@ -26,22 +29,14 @@ export default {
 };
 </script>
 
-<!-- <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+body {
+  background-color: darkslateblue;
+  color: white;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 </style> -->
