@@ -11,10 +11,16 @@
     </ul>
 
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+
+    <p>Para acessar meu portifólio basta <a v-bind:href="meu_link">clicar aqui</a></p>
+    <PictureVue />
+
   </div>
 </template>
 
 <script>
+import PictureVue from "./Picture.vue";
+
 export default {
   name: "Info",
   data() {
@@ -22,7 +28,11 @@ export default {
       esta_trabalhando: false,
       mostrar_email: true,
       email: "breno_ribas@outlook.com",
+      meu_link: "https://google.com",
     };
+  },
+  components: {
+    PictureVue,
   },
 };
 </script>
