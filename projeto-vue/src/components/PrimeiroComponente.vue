@@ -3,12 +3,17 @@
     <h1>Hello Vue!</h1>
     <p>Meu nome é {{ name }} e trabalho como {{ profissao }}</p>
     <MultiplosEventosVue/>
+    <ReutilizacaoVue/>
+    <ReutilizacaoVue/>
+    <ReutilizacaoVue/>
+    <ReutilizacaoVue/>
+    
   </div>
 </template>
 
 <script>
 import MultiplosEventosVue from './MultiplosEventos.vue';
-MultiplosEventosVue
+import ReutilizacaoVue from './Reutilizacao.vue';
 
 export default {
   name: "PrimeiroComponente",
@@ -19,7 +24,8 @@ export default {
     };
   },
   components: {
-    MultiplosEventosVue
+    MultiplosEventosVue,
+    ReutilizacaoVue
   }
 };
 </script>

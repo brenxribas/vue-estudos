@@ -33,6 +33,6 @@ export default {
 
 <style scoped>
 div {
-  margin: 100px;
+  margin: 50px;
 }
 </style>
