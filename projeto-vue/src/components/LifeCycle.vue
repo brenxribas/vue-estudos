@@ -1,4 +1,4 @@
-<!-- LIFE CYCLE HOOKS  -->
+<!-- LIFECYCLE HOOKS  -->
 <template>
   <div>
     <h1>Meu nome é: {{ nome }}</h1>
@@ -17,11 +17,17 @@ export default {
     setTimeout(() => {
       this.nome = "Breno";
     }, 1000);
+    this.lifeCycle();
   },
   mounted() {
     setTimeout(() => {
       this.nome = "Pedro";
     }, 3000);
+  },
+  methods: {
+    lifeCycle() {
+      console.log("Testando");
+    },
   },
 };
 </script>
