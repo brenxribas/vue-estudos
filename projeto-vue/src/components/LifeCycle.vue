@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     lifeCycle() {
-      console.log("Testando");
+      // console.log("Testando");
     },
   },
 };

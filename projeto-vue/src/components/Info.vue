@@ -1,18 +1,24 @@
 <template>
   <div>
+    <p>{{ compEmail }}</p>
+
     <PictureVue />
 
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades.</p>
-    
+
     <p>Utilizo as seguintes tecnologias para back-end:</p>
     <ul>
-      <li v-for="(technology, index) in backend_tecnologies" v-bind:key="index">{{technology}}</li>
+      <li v-for="(technology, index) in backend_tecnologies" v-bind:key="index">
+        {{ technology }}
+      </li>
     </ul>
 
     <p>Utilizo as seguintes tecnologias para front-end:</p>
     <ul>
-      <li v-for="technology in frontend_tecnologies" :key="technology.id">{{technology.language}}</li>
+      <li v-for="technology in frontend_tecnologies" :key="technology.id">
+        {{ technology.language }}
+      </li>
     </ul>
 
     <button @click="showEmail">{{ textoBotao }}</button>
@@ -22,7 +28,6 @@
       Para acessar meu portifólio basta
       <a v-bind:href="meu_link">clicar aqui</a>
     </p>
-   
   </div>
 </template>
 
@@ -33,21 +38,23 @@ export default {
   name: "Info",
   data() {
     return {
-      esta_trabalhando: false,
       mostrar_email: false,
-      email: "breno_ribas@outlook.com",
       meu_link: "https://google.com",
       textoBotao: "Mostrar email",
       backend_tecnologies: ["Javascript", "PHP", "Python"],
       frontend_tecnologies: [
-        {id: 1, language: 'HTML5'},
-        {id: 2, language: 'CSS3'},
-        {id: 3, language: 'React'}
-      ]
+        { id: 1, language: "HTML5" },
+        { id: 2, language: "CSS3" },
+        { id: 3, language: "React" },
+      ],
     };
   },
   components: {
     PictureVue,
+  },
+  props: {
+    email: String,
+    esta_trabalhando: Boolean,
   },
   methods: {
     showEmail() {
@@ -64,12 +71,11 @@ export default {
 
 <style scoped>
 ul {
-  list-style: none; 
+  list-style: none;
 }
- 
+
 li {
   margin-top: 10px;
   margin-right: 20px;
 }
-
 </style>
