@@ -23,7 +23,7 @@ export default {
 }
 
 #main-banner h1{
-  color: #fff;
+  color: #FCBA03;
   text-align: center;
   font-size: 60px;
   background-color: #222;
