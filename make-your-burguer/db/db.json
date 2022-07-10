@@ -123,17 +123,6 @@
       ],
       "status": "Solicitado",
       "id": 4
-    },
-    {
-      "nome": "Cássio",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 5
     }
   ]
 }
